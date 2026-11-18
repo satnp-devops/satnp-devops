@@ -1,0 +1,15 @@
+{
+  "participants": [
+    {
+      "name": "conferenceRecords/fe5ea4d0-0b0f-4c47-9e7c-5d0f2b0a1c11/participants/p-parent",
+      "earliestStartTime": "2026-11-10T04:31:00Z",
+      "latestEndTime": "2026-11-10T05:02:00Z",
+      "anonymousUser": { "displayName": "Priya Sharma" }
+    },
+    {
+      "name": "conferenceRecords/fe5ea4d0-0b0f-4c47-9e7c-5d0f2b0a1c11/participants/p-phone",
+      "earliestStartTime": "2026-11-10T04:40:00Z",
+      "phoneUser": { "displayName": "+91 98xxxxxx21" }
+    }
+  ]
+}

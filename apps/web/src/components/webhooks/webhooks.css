@@ -1,0 +1,264 @@
+/* Settings › Integrations › Webhooks and jobs. Classes are prefixed wh-; colours come from globals.css tokens. */
+
+.wh-toolbar .select {
+  max-width: 240px;
+}
+.wh-toolbar__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.wh-toolbar__check input {
+  accent-color: var(--accent);
+}
+
+.wh-table td {
+  vertical-align: top;
+}
+/* Keeps the visually hidden "Actions" header inside the scrolling table, so it can't widen the page on phones. */
+.wh-table th {
+  position: relative;
+}
+.wh-event {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.wh-event .crm-mono {
+  font-size: 12px;
+  color: var(--text-3);
+  overflow-wrap: anywhere;
+}
+.wh-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.wh-error {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 360px;
+  color: var(--danger);
+  font-size: 12.5px;
+}
+
+/* Summary strip above the delivery log */
+.wh-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 13px;
+  color: var(--text-2);
+}
+.wh-summary strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.wh-summary__failed strong {
+  color: var(--danger);
+}
+
+/* The webhook URL of the chosen connection */
+.wh-url {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--surface-2);
+  font-size: 13px;
+}
+.wh-url code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  color: var(--text);
+}
+
+/* Details row */
+.wh-details td {
+  background: var(--surface-2);
+}
+.wh-dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 12px;
+  margin: 0;
+}
+.wh-dl dt {
+  color: var(--text-3);
+}
+.wh-dl dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.wh-payload {
+  max-height: 320px;
+  overflow: auto;
+}
+.wh-handlers {
+  margin: 0;
+  padding-left: 18px;
+}
+.wh-errors {
+  margin: 0;
+  padding-left: 18px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+/* Progress */
+.wh-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+}
+.wh-progress__track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line-soft);
+  overflow: hidden;
+}
+.wh-progress__bar {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.wh-progress--done .wh-progress__bar {
+  background: var(--success);
+}
+.wh-progress--failed .wh-progress__bar {
+  background: var(--danger);
+}
+.wh-progress__text {
+  font-size: 12px;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.wh-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .wh-toolbar .select {
+    max-width: none;
+    width: 100%;
+  }
+  .wh-hide-sm {
+    display: none;
+  }
+  .wh-error {
+    max-width: 220px;
+  }
+  .wh-dl {
+    grid-template-columns: 1fr;
+    gap: 0 12px;
+  }
+  .wh-dl dd {
+    margin-bottom: 6px;
+  }
+  .wh-progress {
+    min-width: 100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wh-progress__bar {
+    transition: none;
+  }
+}
+
+.wh-text-danger {
+  color: var(--danger);
+}
+
+.wh-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .wh-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* Phones: each row becomes a small card (what, actions / when / status / progress), so nothing
+   scrolls sideways and the Replay and Details buttons stay in view. */
+@media (max-width: 640px) {
+  .wh-table thead {
+    display: none;
+  }
+  .wh-table,
+  .wh-table tbody {
+    display: block;
+    width: 100%;
+  }
+  .wh-table tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 12px;
+    padding: 12px 16px;
+    border-top: 1px solid var(--line-soft);
+  }
+  .wh-table tbody td,
+  .wh-table tbody td:first-child {
+    display: block;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+  .wh-table tbody td.wh-hide-sm {
+    display: none;
+  }
+  .wh-table .wh-cell-main {
+    order: 1;
+    grid-column: 1;
+  }
+  .wh-table .wh-cell-actions {
+    order: 2;
+    grid-column: 2;
+    grid-row: span 2;
+    width: auto; /* .cell-actions is width: 1%, which would let the buttons spill over the text */
+  }
+  .wh-table .wh-cell-time {
+    order: 3;
+    grid-column: 1;
+    font-size: 12px;
+    color: var(--text-3);
+  }
+  .wh-table .wh-cell-status {
+    order: 4;
+    grid-column: 1 / -1;
+  }
+  .wh-table .wh-cell-progress {
+    order: 5;
+    grid-column: 1 / -1;
+  }
+  .wh-table .wh-error {
+    max-width: none;
+  }
+  .wh-table tbody tr.wh-details {
+    display: block;
+    padding: 12px 16px;
+    background: var(--surface-2);
+  }
+}

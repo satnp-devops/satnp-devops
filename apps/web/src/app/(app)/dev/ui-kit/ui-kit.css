@@ -1,0 +1,132 @@
+/* The UI kit gallery page only. Classes start with uikit-. */
+
+.uikit {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.uikit-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.uikit-toc a {
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+}
+.uikit-toc a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.uikit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  scroll-margin-top: 16px;
+}
+.uikit-section__header p {
+  margin-top: 2px;
+  max-width: 820px;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-3);
+}
+.uikit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 12px;
+}
+.uikit-grid--wide {
+  grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+  align-items: start;
+}
+.uikit-specimen {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+.uikit-specimen__title {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--text-3);
+}
+.uikit-specimen__demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  min-width: 0;
+}
+.uikit-specimen__code {
+  align-self: flex-start;
+  max-width: 100%;
+  padding: 5px 8px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  overflow-wrap: anywhere;
+}
+.uikit-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+.uikit-lead {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.uikit-lead__name {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-weight: 600;
+}
+.uikit-lead__meta {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--text-3);
+}
+.uikit-quote {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent-line);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--surface-2);
+  font-size: 13px;
+  line-height: 19px;
+}
+.uikit-owner {
+  margin-top: 14px;
+  max-width: 360px;
+}
+.uikit-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(420px, 100%);
+}
+.uikit-fill {
+  width: 100%;
+  min-width: 0;
+}

@@ -1,0 +1,11 @@
+{
+  "participants": [
+    {
+      "name": "conferenceRecords/fe5ea4d0-0b0f-4c47-9e7c-5d0f2b0a1c11/participants/p-counsellor",
+      "earliestStartTime": "2026-11-10T04:29:12Z",
+      "latestEndTime": "2026-11-10T05:03:40Z",
+      "signedinUser": { "user": "users/112233445566778899000", "displayName": "Meera Iyer" }
+    }
+  ],
+  "nextPageToken": "page-2"
+}

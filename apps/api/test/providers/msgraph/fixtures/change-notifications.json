@@ -1,0 +1,46 @@
+{
+  "value": [
+    {
+      "id": "lsgTZMr9KwAAA",
+      "subscriptionId": "7f105c7d-2dc5-4530-97cd-4e7ae6534c07",
+      "subscriptionExpirationDateTime": "2026-11-12T04:30:00.0000000Z",
+      "clientState": "v1.phoenix-crm-sub-0001.mSE7pOSme91JwEr30a6MemXLxeeB9l0Y2NUbOd8qf78",
+      "changeType": "created",
+      "resource": "Users/16664f75-11dc-4870-bec6-38c1aaa81431/Events/AAMkAGI1AAAt8AHjAAA=",
+      "tenantId": "11111111-2222-4333-8444-555555555555",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Event",
+        "@odata.id": "Users/16664f75-11dc-4870-bec6-38c1aaa81431/Events/AAMkAGI1AAAt8AHjAAA=",
+        "@odata.etag": "W/\"ZlnW4RIAV06KYYwlrfNZvQAALfZeRQ==\"",
+        "id": "AAMkAGI1AAAt8AHjAAA="
+      }
+    },
+    {
+      "subscriptionId": "7f105c7d-2dc5-4530-97cd-4e7ae6534c07",
+      "subscriptionExpirationDateTime": "2026-11-12T04:30:00.0000000Z",
+      "clientState": "v1.phoenix-crm-sub-0001.mSE7pOSme91JwEr30a6MemXLxeeB9l0Y2NUbOd8qf78",
+      "changeType": "updated",
+      "resource": "Users/16664f75-11dc-4870-bec6-38c1aaa81431/Events/AAMkAGI1AAAt8AHjAAA=",
+      "tenantId": "11111111-2222-4333-8444-555555555555",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Event",
+        "@odata.id": "Users/16664f75-11dc-4870-bec6-38c1aaa81431/Events/AAMkAGI1AAAt8AHjAAA=",
+        "@odata.etag": "W/\"ZlnW4RIAV06KYYwlrfNZvQAALfZeRg==\"",
+        "id": "AAMkAGI1AAAt8AHjAAA="
+      }
+    },
+    {
+      "subscriptionId": "7f105c7d-2dc5-4530-97cd-4e7ae6534c07",
+      "subscriptionExpirationDateTime": "2026-11-12T04:30:00.0000000Z",
+      "clientState": "v1.phoenix-crm-sub-0001.mSE7pOSme91JwEr30a6MemXLxeeB9l0Y2NUbOd8qf78",
+      "changeType": "deleted",
+      "resource": "Users/16664f75-11dc-4870-bec6-38c1aaa81431/Events/AAMkAGI1AAAt9BIkAAA=",
+      "tenantId": "11111111-2222-4333-8444-555555555555",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Event",
+        "@odata.id": "Users/16664f75-11dc-4870-bec6-38c1aaa81431/Events/AAMkAGI1AAAt9BIkAAA=",
+        "id": "AAMkAGI1AAAt9BIkAAA="
+      }
+    }
+  ]
+}

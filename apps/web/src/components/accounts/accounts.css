@@ -1,0 +1,351 @@
+/* Institutes (accounts slice): list, profile and dialogs. Built on the variables in app/globals.css. */
+
+/* ---------- List ---------- */
+
+.accounts-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.accounts-name__link {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.accounts-name__link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.accounts-name__meta {
+  color: var(--text-3);
+  font-size: 12px;
+  line-height: 16px;
+}
+.accounts-row--archived .accounts-name__link {
+  color: var(--text-2);
+}
+.accounts-more {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.accounts-range {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+.accounts-pill-company {
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+/* ---------- Personal details ---------- */
+
+.accounts-pii {
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+a.accounts-pii {
+  color: var(--accent);
+  text-decoration: none;
+}
+a.accounts-pii:hover {
+  text-decoration: underline;
+}
+.accounts-pii--phone {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.accounts-pii--masked {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* ---------- Profile header ---------- */
+
+.accounts-header h1 {
+  overflow-wrap: anywhere;
+}
+.accounts-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 4px;
+  color: var(--text-2);
+  font-size: 13px;
+  text-decoration: none;
+}
+.accounts-back:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.accounts-back__icon {
+  transform: rotate(180deg);
+}
+.accounts-reach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+.accounts-reach li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--text-3);
+}
+.accounts-reach .accounts-external,
+.accounts-reach .accounts-pii {
+  overflow-wrap: anywhere;
+}
+.accounts-header__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 10px;
+}
+.accounts-loading {
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
+}
+
+.accounts-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: 1px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.accounts-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 12px 16px;
+  background: var(--surface);
+}
+.accounts-fact dt {
+  color: var(--text-3);
+  font-size: 12px;
+  line-height: 16px;
+}
+.accounts-fact dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.accounts-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.accounts-external:hover {
+  text-decoration: underline;
+}
+.accounts-notes {
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+  color: var(--text-2);
+  white-space: pre-line;
+}
+
+/* ---------- People ---------- */
+
+.accounts-people {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.accounts-person {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--line-soft);
+}
+.accounts-person:first-child {
+  border-top: 0;
+}
+.accounts-person__main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.accounts-person__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-weight: 600;
+}
+.accounts-person__name a {
+  color: var(--text);
+  text-decoration: none;
+}
+.accounts-person__name a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.accounts-person__meta,
+.accounts-person__reach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  color: var(--text-2);
+  font-size: 13px;
+}
+.accounts-role {
+  color: var(--text-2);
+}
+.accounts-role--decision {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Deals ---------- */
+
+.accounts-deals {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.accounts-deal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--line-soft);
+}
+.accounts-deal:first-child {
+  border-top: 0;
+}
+.accounts-deal__main {
+  display: flex;
+  flex: 1 1 260px;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.accounts-deal__title {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.accounts-deal__title:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.accounts-deal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 10px;
+  color: var(--text-3);
+  font-size: 12px;
+}
+.accounts-deal__side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+/* ---------- Forms ---------- */
+
+.accounts-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: 12px 16px;
+  align-items: start;
+}
+.accounts-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 14px 16px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.accounts-fieldset > legend {
+  padding: 0 6px;
+  margin-left: -6px;
+  font-weight: 600;
+}
+.accounts-segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.accounts-results {
+  display: flex;
+  flex-direction: column;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.accounts-result {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: center;
+  padding: 8px 12px;
+  border-top: 1px solid var(--line-soft);
+  cursor: pointer;
+}
+.accounts-result:first-child {
+  border-top: 0;
+}
+.accounts-result:has(input:checked) {
+  background: var(--accent-soft);
+}
+.accounts-result input {
+  grid-row: span 2;
+}
+.accounts-result__name {
+  font-weight: 600;
+}
+.accounts-result--disabled {
+  cursor: default;
+  color: var(--text-3);
+}
+
+@media (max-width: 640px) {
+  .accounts-person {
+    padding: 12px;
+  }
+  .accounts-deal {
+    padding: 12px;
+  }
+  .accounts-deal__side {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+}

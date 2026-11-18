@@ -1,0 +1,17 @@
+{
+  "kind": "calendar#freeBusy",
+  "timeMin": "2026-11-10T00:00:00.000Z",
+  "timeMax": "2026-11-11T00:00:00.000Z",
+  "calendars": {
+    "counsellor@phoenix-school.example.in": {
+      "busy": [
+        { "start": "2026-11-10T04:30:00Z", "end": "2026-11-10T05:00:00Z" },
+        { "start": "2026-11-10T09:00:00Z", "end": "2026-11-10T10:15:00Z" }
+      ]
+    },
+    "unknown@example.com": {
+      "errors": [{ "domain": "global", "reason": "notFound" }],
+      "busy": []
+    }
+  }
+}

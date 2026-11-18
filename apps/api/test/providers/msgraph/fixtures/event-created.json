@@ -1,0 +1,41 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('16664f75-11dc-4870-bec6-38c1aaa81431')/events/$entity",
+  "@odata.etag": "W/\"ZlnW4RIAV06KYYwlrfNZvQAALfZeRQ==\"",
+  "id": "AAMkAGI1AAAt8AHjAAA=",
+  "createdDateTime": "2026-11-05T03:00:50.7579581Z",
+  "lastModifiedDateTime": "2026-11-05T03:00:51.245372Z",
+  "changeKey": "ZlnW4RIAV06KYYwlrfNZvQAALfZeRQ==",
+  "iCalUId": "040000008200E00074C5B7101A82E00800000000DA2B357D94B5D201000000000000000010000000EC4597557F0CB34EA4CC2887EA7B17C3",
+  "subject": "Admissions counselling: Grade 11 science",
+  "isAllDay": false,
+  "isCancelled": false,
+  "isOrganizer": true,
+  "showAs": "busy",
+  "type": "singleInstance",
+  "webLink": "https://outlook.office365.com/owa/?itemid=AAMkAGI1AAAt8AHjAAA%3D&exvsurl=1&path=/calendar/item",
+  "isOnlineMeeting": true,
+  "onlineMeetingProvider": "teamsForBusiness",
+  "allowNewTimeProposals": false,
+  "transactionId": "booking-8f3c2a",
+  "start": { "dateTime": "2026-11-10T05:30:00.0000000", "timeZone": "UTC" },
+  "end": { "dateTime": "2026-11-10T06:00:00.0000000", "timeZone": "UTC" },
+  "location": { "displayName": "Microsoft Teams Meeting", "locationType": "default" },
+  "attendees": [
+    {
+      "type": "required",
+      "status": { "response": "none", "time": "0001-01-01T00:00:00Z" },
+      "emailAddress": { "name": "Anita Sharma", "address": "anita.sharma@example.com" }
+    },
+    {
+      "type": "optional",
+      "status": { "response": "accepted", "time": "2026-11-05T04:10:00Z" },
+      "emailAddress": { "name": "Rohan Sharma", "address": "rohan.sharma@example.com" }
+    }
+  ],
+  "organizer": { "emailAddress": { "name": "Priya Counsellor", "address": "counsellor.priya@phoenix.example.in" } },
+  "onlineMeeting": {
+    "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzIyNzhlMGEtM2YyZC00ZmY0LTlhNzUtZmZjNWFmZGNlNzE2%40thread.v2/0?context=%7b%22Tid%22%3a%2211111111-2222-4333-8444-555555555555%22%2c%22Oid%22%3a%2216664f75-11dc-4870-bec6-38c1aaa81431%22%7d",
+    "conferenceId": "177513992",
+    "tollNumber": "+91 22 6241 6885"
+  }
+}

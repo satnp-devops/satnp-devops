@@ -1,0 +1,276 @@
+/* Contacts directory, contact drawer and dialogs (classes prefixed contacts-). */
+
+/* ---------- Shared bits ---------- */
+
+.contacts-pii {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.contacts-pii--phone {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+.contacts-pii--masked {
+  color: var(--text-3);
+}
+.contacts-pii__lock {
+  flex: none;
+  color: var(--text-3);
+}
+
+.contacts-sub {
+  color: var(--text-3);
+  font-size: 12.5px;
+  line-height: 18px;
+}
+
+.contacts-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Drawer ---------- */
+
+.contacts-drawer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contacts-drawer .crm-section {
+  box-shadow: none;
+}
+.contacts-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: center;
+}
+
+.contacts-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.contacts-rows > li + li {
+  border-top: 1px solid var(--line-soft);
+}
+.contacts-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  min-height: 52px;
+}
+.contacts-row__icon {
+  flex: none;
+  color: var(--text-3);
+}
+.contacts-row__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contacts-row__title {
+  font-weight: 600;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.contacts-row__title--muted {
+  color: var(--text-3);
+  text-decoration: line-through;
+}
+.contacts-row__actions {
+  flex: none;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.contacts-row__link {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+.contacts-row__link:hover {
+  text-decoration: underline;
+}
+.contacts-row__button {
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: left;
+  cursor: pointer;
+}
+.contacts-row__button:hover {
+  text-decoration: underline;
+}
+
+.contacts-empty-line {
+  margin: 0;
+  padding: 14px 16px;
+  color: var(--text-3);
+  font-size: 13px;
+}
+
+.contacts-inline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line-soft);
+  background: var(--surface-2);
+}
+.contacts-inline-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.contacts-household + .contacts-household {
+  border-top: 1px solid var(--line);
+}
+.contacts-household__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px 4px;
+}
+.contacts-household__name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Consent matrix: one row per channel, one column per purpose. */
+.contacts-consent-select {
+  height: 36px;
+  width: auto;
+  min-width: 150px;
+  max-width: 100%;
+}
+.contacts-consent-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 16px 0;
+}
+.contacts-consent-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.contacts-consent-wrap {
+  padding: 8px 16px 12px;
+  overflow-x: auto;
+}
+.contacts-consent-table th,
+.contacts-consent-table td {
+  padding: 8px 6px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: middle;
+}
+.contacts-consent-table thead th {
+  color: var(--text-3);
+  font-weight: 600;
+  font-size: 12px;
+}
+.contacts-consent-table tbody th {
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.contacts-consent-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+.contacts-history {
+  padding: 0 16px 12px;
+}
+.contacts-history summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+/* Duplicate warnings and pickers. */
+.contacts-match {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contacts-candidates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.contacts-candidates > li + li {
+  border-top: 1px solid var(--line-soft);
+}
+.contacts-candidate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+}
+button.contacts-candidate {
+  cursor: pointer;
+}
+button.contacts-candidate:hover {
+  background: var(--surface-2);
+}
+.contacts-candidate[aria-pressed='true'] {
+  background: var(--accent-soft);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.contacts-candidate__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contacts-danger-zone {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .contacts-row {
+    padding: 10px 12px;
+  }
+}
+
+/* The kit's search box grows along a row; in a picker it sits in a column. */
+.contacts-picker-search.crm-search {
+  flex: none;
+  max-width: none;
+}

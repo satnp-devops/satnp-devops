@@ -1,0 +1,49 @@
+{
+  "onlineMeetings": {
+    "value": [
+      {
+        "id": "MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZ",
+        "subject": "Admissions counselling: Grade 11 science",
+        "startDateTime": "2026-11-10T05:30:00Z",
+        "endDateTime": "2026-11-10T06:00:00Z",
+        "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzIyNzhlMGEtM2YyZC00ZmY0LTlhNzUtZmZjNWFmZGNlNzE2%40thread.v2/0?context=%7b%22Tid%22%3a%2211111111-2222-4333-8444-555555555555%22%2c%22Oid%22%3a%2216664f75-11dc-4870-bec6-38c1aaa81431%22%7d",
+        "joinMeetingIdSettings": { "joinMeetingId": "1234567890", "isPasscodeRequired": true }
+      }
+    ]
+  },
+  "reports": {
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('16664f75-11dc-4870-bec6-38c1aaa81431')/onlineMeetings('MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZ')/attendanceReports",
+    "value": [
+      {
+        "id": "c9b6db1c-d5eb-427d-a5c0-20088d9b22d7",
+        "totalParticipantCount": 2,
+        "meetingStartDateTime": "2026-11-10T05:31:23.945Z",
+        "meetingEndDateTime": "2026-11-10T06:02:49.77Z",
+        "attendanceRecords": []
+      }
+    ]
+  },
+  "records": {
+    "value": [
+      {
+        "emailAddress": "counsellor.priya@phoenix.example.in",
+        "totalAttendanceInSeconds": 1886,
+        "role": "Organizer",
+        "identity": { "id": "16664f75-11dc-4870-bec6-38c1aaa81431", "displayName": "Priya Counsellor", "tenantId": null },
+        "attendanceIntervals": [
+          { "joinDateTime": "2026-11-10T05:31:23.6027225Z", "leaveDateTime": "2026-11-10T06:02:49.7702391Z", "durationInSeconds": 1886 }
+        ]
+      },
+      {
+        "emailAddress": "",
+        "totalAttendanceInSeconds": 1500,
+        "role": "Attendee",
+        "identity": { "id": "a7f2b5c1-0000-4000-8000-000000000001", "displayName": "Anita Sharma (Guest)", "tenantId": null },
+        "attendanceIntervals": [
+          { "joinDateTime": "2026-11-10T05:35:00.1000000Z", "leaveDateTime": "2026-11-10T05:50:00.2000000Z", "durationInSeconds": 900 },
+          { "joinDateTime": "2026-11-10T05:52:00Z", "leaveDateTime": "2026-11-10T06:02:00Z", "durationInSeconds": 600 }
+        ]
+      }
+    ]
+  }
+}

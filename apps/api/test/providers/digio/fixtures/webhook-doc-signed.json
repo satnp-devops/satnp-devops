@@ -1,0 +1,76 @@
+{
+  "entities": ["document"],
+  "payload": {
+    "document": {
+      "updated_at": 1612331669000,
+      "sign_request_details": {
+        "identifier": "admissions@phoenix.example",
+        "expire_on": 1613240999000,
+        "name": "Phoenix Test Account",
+        "requested_on": 1612331669000,
+        "requester_type": "org"
+      },
+      "file_name": "admission-agreement.pdf",
+      "agreement_status": "completed",
+      "id": "DID210203112428801WRLZNUOYR345SJ",
+      "signing_parties": [
+        {
+          "has_dependents": null,
+          "signature_mode": null,
+          "identifier": "9876543210",
+          "reason": "Fee agreement",
+          "type": "self",
+          "signature_type": "aadhaar",
+          "signing_index": null,
+          "updated_at": 1612331810000,
+          "expire_on": 1613240999000,
+          "name": "Asha Verma",
+          "skip_primary_sign": null,
+          "pki_signature_details": {
+            "name_validation_score": 100,
+            "aadhaar_suffix": "1234",
+            "gender": "F",
+            "name": "Asha Verma",
+            "postal_code": "400001",
+            "display_name": "Asha Verma",
+            "hash_of_photograph": "C80ADFDAD35B0DBD671B8B6C3DDC8D0E7D4EEB406DE71C5C4E425FBBF03955D8",
+            "year_of_birth": "1980"
+          },
+          "dependents": null,
+          "next_dependent": null,
+          "status": "signed"
+        },
+        {
+          "has_dependents": null,
+          "signature_mode": null,
+          "identifier": "8765432109",
+          "reason": "Fee agreement",
+          "type": "self",
+          "signature_type": "aadhaar",
+          "signing_index": null,
+          "updated_at": 1612331669000,
+          "expire_on": 1613240999000,
+          "name": "Ravi Verma",
+          "skip_primary_sign": null,
+          "pki_signature_details": {
+            "name_validation_score": 54,
+            "aadhaar_suffix": "5678",
+            "gender": "M",
+            "name": "Ravi Kumar Verma",
+            "postal_code": "400001",
+            "display_name": "Ravi Verma",
+            "hash_of_photograph": "D80ADFDAD35B0DBD671B8B6C3DDC8D0E7D4EEB406DE71C5C4E425FBBF03955D8",
+            "year_of_birth": "1978"
+          },
+          "dependents": null,
+          "next_dependent": null,
+          "status": "signed"
+        }
+      ],
+      "others": { "last_signed_by": "8765432109", "has_all_signed": true }
+    }
+  },
+  "created_at": 1612332250000,
+  "id": "WHN2102031134107462ZH2S89SR5WDVG",
+  "event": "doc.signed"
+}

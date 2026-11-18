@@ -1,0 +1,51 @@
+/* The contacts directory (/leads/contacts). Shared contact styles: components/contacts/contacts.css. */
+
+.contacts-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.contacts-person__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.contacts-person__name {
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.contacts-person__name--erased {
+  font-style: italic;
+  color: var(--text-3);
+  font-weight: 500;
+}
+.contacts-reach {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.contacts-companies {
+  color: var(--text-2);
+  font-size: 13px;
+}
+.contacts-toolbar-select {
+  height: 36px;
+  width: auto;
+  min-width: 150px;
+  max-width: 220px;
+}
+.contacts-new {
+  flex: none;
+}
+
+@media (max-width: 640px) {
+  .contacts-toolbar-select {
+    max-width: none;
+    flex: 1 1 140px;
+  }
+}

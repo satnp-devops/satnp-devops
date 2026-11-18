@@ -1,0 +1,13 @@
+/* Settings > Products: product lines as cards, their products as rows. */
+
+.config-catalog__bar {
+  flex-wrap: wrap;
+  min-height: 32px;
+}
+.config-catalog__line--inactive .card__heading h2 {
+  color: var(--text-3);
+}
+.config-catalog__empty {
+  margin: 0;
+  padding: 12px 16px 16px;
+}

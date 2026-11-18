@@ -1,0 +1,128 @@
+/* My tasks page: quick add, filters, the jump-to counts and the due-date sections. */
+
+.tasks-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 960px;
+}
+
+.tasks-quick {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tasks-quick__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tasks-quick__title {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.tasks-quick__due {
+  flex: 0 0 130px;
+}
+.tasks-quick__unit {
+  flex: 0 1 220px;
+  min-width: 0;
+}
+
+.tasks-page__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.tasks-page__company .select {
+  min-width: 170px;
+}
+
+.tasks-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.tasks-summary__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text-2);
+  text-decoration: none;
+}
+.tasks-summary__item:hover {
+  border-color: var(--line-strong);
+}
+.tasks-summary__item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.tasks-summary__count {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+}
+.tasks-summary__item.is-danger .tasks-summary__count {
+  color: var(--danger);
+}
+.tasks-summary__label {
+  font-size: 13px;
+}
+
+.tasks-section {
+  scroll-margin-top: 16px;
+}
+.tasks-section__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.tasks-section__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.tasks-section__count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+}
+.tasks-section--danger .tasks-section__title {
+  color: var(--danger);
+}
+.tasks-section--danger .tasks-section__count {
+  background: var(--danger-soft);
+  border-color: #f5c6c1;
+  color: var(--danger);
+}
+
+@media (max-width: 640px) {
+  .tasks-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .tasks-quick__due,
+  .tasks-quick__unit {
+    flex: 1 1 140px;
+  }
+  .tasks-quick .btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "value": [
+    {
+      "subscriptionId": "7f105c7d-2dc5-4530-97cd-4e7ae6534c07",
+      "subscriptionExpirationDateTime": "2026-11-12T04:30:00.0000000Z",
+      "tenantId": "11111111-2222-4333-8444-555555555555",
+      "clientState": "v1.phoenix-crm-sub-0001.mSE7pOSme91JwEr30a6MemXLxeeB9l0Y2NUbOd8qf78",
+      "lifecycleEvent": "reauthorizationRequired"
+    },
+    {
+      "subscriptionId": "7f105c7d-2dc5-4530-97cd-4e7ae6534c07",
+      "subscriptionExpirationDateTime": "2026-11-12T04:30:00.0000000Z",
+      "tenantId": "11111111-2222-4333-8444-555555555555",
+      "clientState": "v1.phoenix-crm-sub-0001.mSE7pOSme91JwEr30a6MemXLxeeB9l0Y2NUbOd8qf78",
+      "lifecycleEvent": "missed"
+    },
+    {
+      "subscriptionId": "0c7fd2a9-5d0e-4a8f-9b3c-2f1e6d4c8b7a",
+      "subscriptionExpirationDateTime": "2026-11-10T00:00:00.0000000Z",
+      "tenantId": "11111111-2222-4333-8444-555555555555",
+      "clientState": "v1.phoenix-crm-sub-0002.MCO3Tot_Ap6PNPgMRa6IW8iXEFDQnxmbxT6svmyKuG4",
+      "lifecycleEvent": "subscriptionRemoved"
+    }
+  ]
+}

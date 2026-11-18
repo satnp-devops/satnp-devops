@@ -1,0 +1,46 @@
+{
+  "page_count": 2,
+  "page_size": 3,
+  "total_records": 6,
+  "next_page_token": "Tva2CuIdTgsv8wAnhyAdU3m06Y2HuLQtlh3",
+  "participants": [
+    {
+      "id": "30R7kT7bTIKSNUFEuH_Qlg",
+      "participant_user_id": "30R7kT7bTIKSNUFEuH_Qlg",
+      "user_id": "16778240",
+      "name": "Priya Sharma",
+      "user_email": "priya.sharma@phoenix.example",
+      "join_time": "2026-11-10T10:29:10Z",
+      "leave_time": "2026-11-10T11:15:00Z",
+      "duration": 2750,
+      "failover": false,
+      "status": "in_meeting",
+      "customer_key": "",
+      "bo_mtg_id": ""
+    },
+    {
+      "id": "",
+      "user_id": "16779264",
+      "name": "Rahul Verma",
+      "user_email": "Rahul.Verma@Example.in",
+      "registrant_id": "rKq8bQmFQ0eTxG3l2X5mEw",
+      "join_time": "2026-11-10T10:31:00Z",
+      "leave_time": "2026-11-10T10:48:30Z",
+      "duration": 1050,
+      "failover": false,
+      "status": "in_meeting"
+    },
+    {
+      "id": "",
+      "user_id": "16780288",
+      "name": "Rahul Verma",
+      "user_email": "rahul.verma@example.in",
+      "registrant_id": "rKq8bQmFQ0eTxG3l2X5mEw",
+      "join_time": "2026-11-10T10:50:00Z",
+      "leave_time": "2026-11-10T11:12:00Z",
+      "duration": 1320,
+      "failover": false,
+      "status": "in_meeting"
+    }
+  ]
+}

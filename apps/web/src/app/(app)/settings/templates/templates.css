@@ -1,0 +1,227 @@
+/* Settings › Templates. Classes start with msgt-. */
+
+.msgt-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.msgt-toolbar .select {
+  width: auto;
+  max-width: 100%;
+}
+.msgt-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msgt-row {
+  border-top: 1px solid var(--line-soft);
+}
+.msgt-row:first-child {
+  border-top: 0;
+}
+.msgt-row__link {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 12px 16px;
+  color: inherit;
+  text-decoration: none;
+}
+.msgt-row__link:hover {
+  background: var(--surface-2);
+}
+.msgt-row__link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.msgt-row__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.msgt-row__main {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.msgt-row__name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.msgt-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.msgt-row__body {
+  font-size: 13px;
+  color: var(--text-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.msgt-row__status {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+/* ---------- Editor ---------- */
+.msgt-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 16px;
+  align-items: start;
+}
+.msgt-editor__side {
+  position: sticky;
+  top: 16px;
+  display: grid;
+  gap: 16px;
+}
+.msgt-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.msgt-head__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  min-width: 0;
+}
+.msgt-head__title h2 {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.msgt-insert {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.msgt-insert button {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 2px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-2);
+  cursor: pointer;
+}
+.msgt-insert button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.msgt-insert button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.msgt-buttons {
+  display: grid;
+  gap: 10px;
+}
+.msgt-button-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) minmax(0, 1.4fr) auto;
+  gap: 8px;
+  align-items: end;
+}
+.msgt-button-row > .btn {
+  margin-bottom: 2px;
+}
+.msgt-provider {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+.msgt-versions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.msgt-versions li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  font-size: 13px;
+}
+.msgt-versions__reason {
+  flex-basis: 100%;
+  color: var(--danger);
+  font-size: 12px;
+}
+.msgt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.msgt-details summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+.msgt-details[open] summary {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 960px) {
+  .msgt-editor {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .msgt-editor__side {
+    position: static;
+  }
+}
+@media (max-width: 640px) {
+  .msgt-row__link {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+  .msgt-row__status {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+  }
+  .msgt-button-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

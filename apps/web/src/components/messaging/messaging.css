@@ -1,0 +1,314 @@
+/* Messaging: reply box, template preview, message thread (components/messaging). Classes start with msg-. */
+
+/* ---------- Template preview ---------- */
+.msg-preview {
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  background: #ece5dd;
+  min-height: 120px;
+}
+.msg-preview--email,
+.msg-preview--sms {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.msg-bubble {
+  position: relative;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 10px;
+  border-top-left-radius: 2px;
+  padding: 8px 10px 6px;
+  box-shadow: 0 1px 1px rgba(17, 22, 46, 0.12);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.msg-bubble__header {
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.msg-bubble__body {
+  margin: 0;
+  white-space: pre-wrap;
+}
+.msg-bubble__footer {
+  margin: 6px 0 0;
+  color: var(--text-3);
+  font-size: 12px;
+}
+.msg-bubble__buttons {
+  display: grid;
+  gap: 1px;
+  margin: 8px -10px -6px;
+  border-top: 1px solid var(--line-soft);
+}
+.msg-bubble__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  color: #00749c;
+  font-weight: 500;
+  font-size: 13px;
+  border-top: 1px solid var(--line-soft);
+}
+.msg-bubble__button:first-child {
+  border-top: 0;
+}
+.msg-var {
+  background: var(--highlight);
+  color: var(--highlight-text);
+  border-radius: 4px;
+  padding: 0 3px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.msg-email {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.msg-email__subject {
+  font-weight: 600;
+  margin: 0 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.msg-email__body {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.msg-sms {
+  max-width: 320px;
+  background: #e9e9eb;
+  border-radius: 16px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.msg-preview__note {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+/* ---------- Reply box ---------- */
+.msg-reply {
+  display: grid;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+}
+.msg-reply__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.msg-segment {
+  display: inline-flex;
+  justify-self: start;
+  max-width: 100%;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.msg-segment legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.msg-segment label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  cursor: pointer;
+  border-left: 1px solid var(--line-strong);
+  background: var(--surface);
+}
+.msg-segment label:first-of-type {
+  border-left: 0;
+}
+.msg-segment input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.msg-segment label:has(input:checked) {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.msg-segment label:has(input:disabled) {
+  color: var(--text-3);
+  background: var(--surface-2);
+  cursor: not-allowed;
+}
+.msg-segment label:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.msg-window {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.msg-window--open {
+  color: var(--success);
+  background: var(--success-soft);
+}
+.msg-window--closed {
+  color: var(--warning);
+  background: var(--warning-soft);
+}
+.msg-reply__to {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.msg-reply__to .select {
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+}
+.msg-reply__grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+.msg-reply__grid > * {
+  min-width: 0;
+}
+.msg-reply__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line-soft);
+}
+.msg-reply__via {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.msg-reply__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.msg-reply__note {
+  font-size: 13px;
+  color: var(--text-2);
+  margin: 0;
+}
+.msg-vars {
+  display: grid;
+  gap: 10px;
+}
+.msg-vars__hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+/* ---------- Thread ---------- */
+.msg-thread {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msg-item {
+  display: grid;
+  gap: 4px;
+  max-width: 85%;
+}
+.msg-item--out {
+  justify-self: end;
+}
+.msg-item__bubble {
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.msg-item--out .msg-item__bubble {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+.msg-item--failed .msg-item__bubble {
+  background: var(--danger-soft);
+  border-color: #f5c2bd;
+}
+.msg-item--pending .msg-item__bubble {
+  opacity: 0.75;
+}
+.msg-item__subject {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.msg-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.msg-item--out .msg-item__meta {
+  justify-content: flex-end;
+}
+.msg-item__error {
+  color: var(--danger);
+}
+
+@media (max-width: 720px) {
+  .msg-reply__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .msg-item {
+    max-width: 100%;
+  }
+}

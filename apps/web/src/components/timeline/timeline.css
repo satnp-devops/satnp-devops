@@ -1,0 +1,360 @@
+/* Timeline: the composer, filters, day groups and entries. Built on the variables in app/globals.css. */
+
+.timeline__composer {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.timeline__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.timeline__channel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.timeline__channel .select {
+  min-width: 150px;
+}
+
+.timeline__day {
+  margin: 0;
+  padding: 14px 16px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-3);
+}
+.timeline__pinned {
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--accent-line);
+  padding-bottom: 4px;
+}
+
+.timeline__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 16px;
+}
+
+.timeline__state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px;
+}
+
+.timeline__more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 14px;
+  border-top: 1px solid var(--line-soft);
+}
+.timeline__end {
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+/* ---------- One entry ---------- */
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  padding: 8px 0;
+}
+/* The line joining the icons of one day. */
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 13.5px;
+  top: 40px;
+  bottom: -8px;
+  width: 1px;
+  background: var(--line);
+}
+
+.timeline-item__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+}
+.timeline-item--note .timeline-item__icon {
+  background: #fff8db;
+  border-color: #f1dc8a;
+  color: #6b5200;
+}
+.timeline-item--stage_change .timeline-item__icon,
+.timeline-item--ai .timeline-item__icon {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  color: var(--accent);
+}
+.timeline-item--task .timeline-item__icon {
+  background: var(--success-soft);
+  border-color: #b9e3c8;
+  color: var(--success);
+}
+
+.timeline-item__card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 3px;
+}
+
+.timeline-item__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+.timeline-item__title {
+  font-weight: 600;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.timeline-item__flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.timeline-item__deal {
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius-sm);
+  padding: 0 6px;
+  background: var(--surface);
+}
+.timeline-item__deal:hover {
+  text-decoration: underline;
+}
+
+.timeline-item__body {
+  margin: 0;
+  color: var(--text-2);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.timeline-item__body--quote {
+  background: var(--surface-2);
+  border-left: 3px solid var(--line-strong);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 6px 10px;
+}
+.timeline-item__meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+.timeline-item__edit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-item__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  min-height: 28px;
+  font-size: 13px;
+  color: var(--text-3);
+}
+.timeline-item__actor {
+  color: var(--text-2);
+  font-weight: 500;
+}
+.timeline-item__edited {
+  font-style: italic;
+}
+.timeline-item__actions {
+  display: inline-flex;
+  gap: 2px;
+}
+.timeline-item__actions .btn[aria-pressed='true'] {
+  color: var(--accent);
+}
+
+/* ---------- Relative time with the exact time on hover and focus ---------- */
+
+.timeline-stamp {
+  position: relative;
+  display: inline-flex;
+  border-radius: 4px;
+  cursor: default;
+}
+.timeline-stamp:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.timeline-stamp__tip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  transform: translateX(-50%);
+  z-index: 5;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--ink-900);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease;
+}
+.timeline-stamp:hover .timeline-stamp__tip,
+.timeline-stamp:focus-visible .timeline-stamp__tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------- Composer ---------- */
+
+.timeline-composer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.timeline-composer__kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.timeline-composer__kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 30px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.timeline-composer__kind:hover {
+  border-color: var(--line-strong);
+}
+.timeline-composer__kind.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.timeline-composer__kind:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.timeline-composer__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.timeline-composer__row .input:first-of-type {
+  flex: 1 1 200px;
+}
+.timeline-composer__minutes {
+  width: 110px;
+}
+.timeline-composer .textarea {
+  resize: vertical;
+}
+.timeline-composer__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.timeline-composer__company {
+  max-width: 220px;
+}
+
+/* ---------- Loading ---------- */
+
+.timeline-item--skeleton::before {
+  display: none;
+}
+.timeline-item--skeleton .timeline-item__icon {
+  border-color: transparent;
+  background: var(--line-soft);
+}
+.timeline-skeleton {
+  display: block;
+  height: 12px;
+  width: 80%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--line-soft) 0%, var(--surface-2) 50%, var(--line-soft) 100%);
+  background-size: 200% 100%;
+  animation: timeline-shimmer 1.2s ease-in-out infinite;
+}
+.timeline-skeleton--title {
+  width: 40%;
+  height: 14px;
+  margin-bottom: 6px;
+}
+@keyframes timeline-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline-skeleton {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline__composer,
+  .timeline__filters {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .timeline__list {
+    padding: 0 12px;
+  }
+  .timeline__day {
+    padding-left: 12px;
+  }
+  .timeline__channel {
+    margin-left: 0;
+    width: 100%;
+  }
+  .timeline__channel .select {
+    flex: 1;
+  }
+  .timeline-composer__company {
+    max-width: none;
+    flex: 1 1 100%;
+  }
+}

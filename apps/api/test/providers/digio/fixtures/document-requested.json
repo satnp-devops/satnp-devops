@@ -1,0 +1,42 @@
+{
+  "id": "DID2611051530123456ABCDEFGHIJKLMN",
+  "is_agreement": true,
+  "agreement_type": "outbound",
+  "agreement_status": "requested",
+  "file_name": "admission-agreement.pdf",
+  "created_at": "2026-11-05 15:30:12",
+  "self_signed": false,
+  "self_sign_type": "aadhaar",
+  "no_of_pages": 3,
+  "signing_parties": [
+    {
+      "name": "Asha Verma",
+      "status": "requested",
+      "type": "self",
+      "signature_type": "aadhaar",
+      "identifier": "asha.verma@example.in",
+      "reason": "Admission agreement",
+      "expire_on": "2026-11-15 23:59:59",
+      "authentication_url": "https://ext.digio.in/#/gateway/login/DID2611051530123456ABCDEFGHIJKLMN/GWT26110515301/asha.verma@example.in"
+    },
+    {
+      "name": "Phoenix Admissions Desk",
+      "status": "sequenced",
+      "type": "self",
+      "signature_type": "electronic",
+      "signature_mode": "slate",
+      "identifier": "9876543210",
+      "reason": "Counter-signature",
+      "expire_on": "2026-11-15 23:59:59"
+    }
+  ],
+  "sign_request_details": {
+    "name": "Phoenix Test Account",
+    "requested_on": "2026-11-05 15:30:12",
+    "expire_on": "2026-11-15 23:59:59",
+    "identifier": "admissions@phoenix.example",
+    "requester_type": "org"
+  },
+  "channel": "api",
+  "other_doc_details": { "web_hook_available": true }
+}

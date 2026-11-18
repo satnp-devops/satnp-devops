@@ -1,0 +1,54 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.scheduleInformation)",
+  "value": [
+    {
+      "scheduleId": "counsellor.priya@phoenix.example.in",
+      "availabilityView": "000220130",
+      "scheduleItems": [
+        {
+          "isPrivate": false,
+          "status": "busy",
+          "subject": "Parent call",
+          "location": "Teams",
+          "start": { "dateTime": "2026-11-10T06:30:00.0000000", "timeZone": "UTC" },
+          "end": { "dateTime": "2026-11-10T07:30:00.0000000", "timeZone": "UTC" }
+        },
+        {
+          "status": "busy",
+          "start": { "dateTime": "2026-11-10T07:00:00.0000000", "timeZone": "UTC" },
+          "end": { "dateTime": "2026-11-10T08:00:00.0000000", "timeZone": "UTC" }
+        },
+        {
+          "status": "free",
+          "start": { "dateTime": "2026-11-10T04:30:00.0000000", "timeZone": "UTC" },
+          "end": { "dateTime": "2026-11-10T05:30:00.0000000", "timeZone": "UTC" }
+        },
+        {
+          "status": "tentative",
+          "start": { "dateTime": "2026-11-10T09:30:00.0000000", "timeZone": "UTC" },
+          "end": { "dateTime": "2026-11-10T10:30:00.0000000", "timeZone": "UTC" }
+        },
+        {
+          "status": "workingElsewhere",
+          "start": { "dateTime": "2026-11-10T10:30:00.0000000", "timeZone": "UTC" },
+          "end": { "dateTime": "2026-11-10T11:30:00.0000000", "timeZone": "UTC" }
+        }
+      ],
+      "workingHours": {
+        "daysOfWeek": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
+        "startTime": "09:30:00.0000000",
+        "endTime": "18:30:00.0000000",
+        "timeZone": { "name": "India Standard Time" }
+      }
+    },
+    {
+      "scheduleId": "unknown.person@phoenix.example.in",
+      "availabilityView": "",
+      "scheduleItems": [],
+      "error": {
+        "message": "The requested user 'unknown.person@phoenix.example.in' is invalid.",
+        "responseCode": "ErrorInvalidUser"
+      }
+    }
+  ]
+}

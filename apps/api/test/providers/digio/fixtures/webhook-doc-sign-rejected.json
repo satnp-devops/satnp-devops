@@ -1,0 +1,36 @@
+{
+  "entities": ["document"],
+  "payload": {
+    "document": {
+      "error_message": null,
+      "validation_results": {
+        "overallResult": "FAIL",
+        "ruleResults": [
+          {
+            "rule_id": 1,
+            "result": "FAIL",
+            "conditions": [
+              { "fuzzy_score": null, "result": "PASS", "field": "GENDER", "match": "EXACT", "actual_value": "M", "expected_value": "M" },
+              { "fuzzy_score": null, "result": "FAIL", "field": "AADHAAR", "match": "EXACT", "actual_value": "7142", "expected_value": "7145" }
+            ]
+          },
+          {
+            "rule_id": 2,
+            "result": "PASS",
+            "conditions": [
+              { "fuzzy_score": null, "result": "FAIL", "field": "YOB", "match": "EXACT", "actual_value": "1997", "expected_value": "1996" },
+              { "fuzzy_score": 83, "result": "PASS", "field": "NAME", "match": "FUZZY", "actual_value": "Someone Something", "expected_value": "Some Thing" }
+            ]
+          }
+        ]
+      },
+      "signer_identifier": "parent@example.in",
+      "error_code": null,
+      "id": "DID230519170552323OQPMNF8XBDVAYO",
+      "others": null
+    }
+  },
+  "created_at": 1684496220000,
+  "id": "WHN230519170700329DEIO1NSND4O17S",
+  "event": "doc.sign.rejected"
+}

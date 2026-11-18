@@ -1,0 +1,16 @@
+{
+  "entities": ["document"],
+  "payload": {
+    "document": {
+      "error_message": "UIDAI Server Down",
+      "validation_results": null,
+      "signer_identifier": "parent@example.in",
+      "error_code": "ESP-###",
+      "id": "DID230519170552323OQPMNF8XBDVAYO",
+      "others": null
+    }
+  },
+  "created_at": 1684496220000,
+  "id": "WHN230519170700329DEIO1NSND4O17T",
+  "event": "doc.sign.failed"
+}

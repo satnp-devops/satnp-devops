@@ -1,0 +1,30 @@
+{
+  "kind": "calendar#event",
+  "etag": "\"3459875310000000\"",
+  "id": "PLACEHOLDER_ID",
+  "status": "confirmed",
+  "htmlLink": "https://www.google.com/calendar/event?eid=cGxhY2Vob2xkZXI",
+  "created": "2026-11-05T10:15:30.000Z",
+  "updated": "2026-11-05T10:15:30.512Z",
+  "summary": "Admission counselling: Aarav Sharma (Class 6)",
+  "description": "Phoenix admissions call",
+  "creator": { "email": "counsellor@phoenix-school.example.in", "self": true },
+  "organizer": { "email": "counsellor@phoenix-school.example.in", "self": true },
+  "start": { "dateTime": "2026-11-10T10:00:00+05:30", "timeZone": "Asia/Kolkata" },
+  "end": { "dateTime": "2026-11-10T10:30:00+05:30", "timeZone": "Asia/Kolkata" },
+  "iCalUID": "PLACEHOLDER_ID@google.com",
+  "sequence": 0,
+  "attendees": [
+    { "email": "parent.sharma@example.com", "displayName": "Priya Sharma", "responseStatus": "needsAction" },
+    { "email": "counsellor@phoenix-school.example.in", "organizer": true, "self": true, "responseStatus": "accepted" }
+  ],
+  "conferenceData": {
+    "createRequest": {
+      "requestId": "PLACEHOLDER_REQUEST",
+      "conferenceSolutionKey": { "type": "hangoutsMeet" },
+      "status": { "statusCode": "pending" }
+    }
+  },
+  "reminders": { "useDefault": true },
+  "eventType": "default"
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "api#channel",
+  "id": "PLACEHOLDER_CHANNEL",
+  "resourceId": "ret08u3rv24htgh289g",
+  "resourceUri": "https://www.googleapis.com/calendar/v3/calendars/counsellor%40phoenix-school.example.in/events?alt=json",
+  "token": "PLACEHOLDER_TOKEN",
+  "expiration": "PLACEHOLDER_EXPIRATION"
+}

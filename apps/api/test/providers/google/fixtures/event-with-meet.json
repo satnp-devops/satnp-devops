@@ -1,0 +1,39 @@
+{
+  "kind": "calendar#event",
+  "id": "PLACEHOLDER_ID",
+  "status": "confirmed",
+  "htmlLink": "https://www.google.com/calendar/event?eid=cGxhY2Vob2xkZXI",
+  "created": "2026-11-05T10:15:30.000Z",
+  "updated": "2026-11-05T10:15:32.104Z",
+  "summary": "Admission counselling: Aarav Sharma (Class 6)",
+  "organizer": { "email": "counsellor@phoenix-school.example.in", "self": true },
+  "start": { "dateTime": "2026-11-10T10:00:00+05:30", "timeZone": "Asia/Kolkata" },
+  "end": { "dateTime": "2026-11-10T10:30:00+05:30", "timeZone": "Asia/Kolkata" },
+  "iCalUID": "PLACEHOLDER_ID@google.com",
+  "sequence": 0,
+  "hangoutLink": "https://meet.google.com/abc-mnop-xyz",
+  "attendees": [
+    { "email": "parent.sharma@example.com", "displayName": "Priya Sharma", "responseStatus": "accepted" }
+  ],
+  "conferenceData": {
+    "createRequest": {
+      "requestId": "PLACEHOLDER_REQUEST",
+      "conferenceSolutionKey": { "type": "hangoutsMeet" },
+      "status": { "statusCode": "success" }
+    },
+    "entryPoints": [
+      { "entryPointType": "video", "uri": "https://meet.google.com/abc-mnop-xyz", "label": "meet.google.com/abc-mnop-xyz" },
+      { "entryPointType": "phone", "uri": "tel:+91-22-7127-0000", "label": "+91 22 7127 0000", "pin": "123456789", "regionCode": "IN" },
+      { "entryPointType": "more", "uri": "https://tel.meet/abc-mnop-xyz?pin=123456789" }
+    ],
+    "conferenceSolution": {
+      "key": { "type": "hangoutsMeet" },
+      "name": "Google Meet",
+      "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png"
+    },
+    "conferenceId": "abc-mnop-xyz"
+  },
+  "extendedProperties": { "private": { "phoenixBookingId": "bk_01HZX" } },
+  "reminders": { "useDefault": false, "overrides": [{ "method": "popup", "minutes": 15 }] },
+  "eventType": "default"
+}

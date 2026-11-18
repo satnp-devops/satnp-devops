@@ -1,0 +1,41 @@
+{
+  "page_count": 2,
+  "page_size": 3,
+  "total_records": 6,
+  "next_page_token": "",
+  "participants": [
+    {
+      "id": "",
+      "user_id": "16781312",
+      "name": "Anita K",
+      "user_email": "",
+      "join_time": "2026-11-10T10:35:00Z",
+      "leave_time": "2026-11-10T10:41:00Z",
+      "duration": 360,
+      "failover": false,
+      "status": "in_meeting"
+    },
+    {
+      "id": "",
+      "user_id": "16782336",
+      "name": "Rahul  Verma",
+      "user_email": "",
+      "join_time": "2026-11-10T10:47:00Z",
+      "leave_time": "2026-11-10T10:52:00Z",
+      "duration": 300,
+      "failover": false,
+      "status": "in_meeting"
+    },
+    {
+      "id": "",
+      "user_id": "16783360",
+      "name": "Sunil",
+      "user_email": "",
+      "join_time": "2026-11-10T10:30:30Z",
+      "leave_time": "2026-11-10T10:31:30Z",
+      "duration": 60,
+      "failover": false,
+      "status": "in_waiting_room"
+    }
+  ]
+}
